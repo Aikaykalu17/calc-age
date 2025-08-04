@@ -164,7 +164,7 @@ const renderCountry = function (data) {
           
           <div style="display: flex; gap: 1rem; height: 100%; justify-items: centre; align-items:centre;" class="country__data">
           <h4 style="color:hsl(259, 100%, 65%);" class="country_city">${data.city}</h4>
-            <h4 style="color:hsl(259, 100%, 65%);" class="country_name">${data.countryName}</h4>
+            <h4 style="color:hsl(259, 100%, 65%);" class="country_name">${data.countryCode}</h4>
             <h4 style="text-transform:none; color:hsl(259, 100%, 65%);" class="country__region">${data.continent}</h4>
           </div>
         </article>
