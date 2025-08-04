@@ -1,0 +1,1659 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 1%, 44%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppings', sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_container {
+  height: 46rem;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 0.8rem 0.8rem 6.5rem 0.8rem;
+}
+
+.container_main {
+  width: 31rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.input_fields {
+  display: flex;
+  flex-direction: row;
+  height: max-content;
+  margin: 0;
+}
+
+.input_field:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: hsl(259, 100%, 65%);
+}
+
+.day_input,
+.month_input,
+.year_input {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  gap: 8px;
+}
+
+.input_day {
+  height: 58px;
+  width: 121px;
+  padding: 10px 12px;
+  font-size: 32px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 4.9px;
+}
+
+.input_month {
+  height: 58px;
+  width: 121px;
+  padding: 10px 12px;
+  font-size: 32px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 4.9px;
+}
+.input_year {
+  height: 56px;
+  width: 121px;
+  padding: 10px 12px;
+  font-size: 32px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 4.9px;
+}
+
+.form_field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2.6rem;
+}
+
+.output_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+.span_year_p {
+  font-size: 45px;
+  display: inline-block;
+  font-weight: 900;
+  color: hsl(0, 0%, 0%);
+}
+.span_day_p {
+  font-size: 45px;
+  display: inline-block;
+  font-weight: 900;
+  color: hsl(0, 0%, 0%);
+}
+
+.span_month_p {
+  font-size: 45px;
+  display: inline-block;
+  font-weight: 900;
+  color: hsl(0, 0%, 0%);
+}
+.day_output_span {
+  font-size: 60px;
+  display: inline-block;
+  color: hsl(259, 100%, 65%);
+  font-weight: 900;
+}
+.month_output_span {
+  font-size: 60px;
+  color: hsl(259, 100%, 65%);
+  display: inline-block;
+  font-weight: 900;
+}
+
+.year_output_span {
+  font-size: 60px;
+  display: inline-block;
+  color: hsl(259, 100%, 65%);
+  font-weight: 900;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.divider_line {
+  width: 100%;
+  border-top: 1px solid hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 86%);
+}
+
+.svg_icon {
+  background-color: hsl(259, 100%, 65%);
+  color: hslhsl(259, 100%, 65%);
+  border-radius: 100%;
+  fill: hsl(259, 100%, 65%);
+}
+
+.hidden_label {
+  font-size: 10px;
+  display: none;
+  color: red;
+  width: 100%;
+  font-style: italic;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.invalid {
+  border-color: red;
+  /* color: red; */
+}
+.invalid:focus {
+  border: solid red;
+  border: 1px solid red;
+  outline: none;
+}
+
+.year_error {
+  display: none;
+  color: red;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
+  font-size: 12px;
+}
+.month_error {
+  display: none;
+  color: red;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
+  font-size: 12px;
+}
+.day_error {
+  display: none;
+  color: red;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.date_day_error {
+  display: none;
+  color: red;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.country_data {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.countries {
+  width: 31rem;
+  display: flex;
+  justify-content: right;
+}
+@media only screen and (min-width: 1290px) and (max-width: 1400px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_container {
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 7rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 25px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    margin-bottom: 9px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+  }
+  .attribution a {
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 65px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 65px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 65px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .svg_icon {
+    height: 90px;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 10px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    width: 85%;
+    font-size: 25px;
+    justify-content: right;
+    position: absolute;
+    top: 11%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_container {
+    height: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 7rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 85%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 25px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    margin-bottom: 9px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+  }
+  .attribution a {
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 65px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 65px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 65px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 65px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .svg_icon {
+    height: 90px;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 10px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    width: 85%;
+    font-size: 28px;
+    justify-content: right;
+    position: absolute;
+    top: 9%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    height: 60rem;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_container {
+    height: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 7rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 75%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 90px;
+    width: 190px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 23px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    margin-bottom: 9px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  .attribution a {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 25px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 25px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 25px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .svg_icon {
+    height: 80px;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 8px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    width: 85%;
+    font-size: 21px;
+    justify-content: right;
+    position: absolute;
+    top: 12%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_container {
+    height: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 7rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 75%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 85px;
+    width: 110px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 85px;
+    width: 110px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 85px;
+    width: 110px;
+    padding: 10px 12px;
+    font-size: 25px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 15px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    margin-bottom: 9px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+  }
+  .attribution a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 25px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 25px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 25px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .svg_icon {
+    height: 50px;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 4px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    width: 75%;
+    font-size: 15px;
+    justify-content: right;
+    position: absolute;
+    top: 16%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main_container {
+    height: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 7rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 10px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    margin-bottom: 9px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .attribution a {
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 30px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 30px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 30px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+  .svg_icon {
+    position: absolute;
+    left: 42%;
+    right: 50%;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 10px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    position: absolute;
+    width: max-content;
+    top: 19%;
+    font-size: 9px;
+    right: 12%;
+    justify-content: right;
+  }
+}

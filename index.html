@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="main_container">
+        <div class="container_main">
+          <div class="countries">
+            <!--
+        <article class="country">
+          <img class="country__img" src="" />
+          <div class="country__data">
+            <h3 class="country__name">COUNTRY</h3>
+            <h4 class="country__region">REGION</h4>
+          </div>
+        </article>
+        -->
+          </div>
+
+          <div class="input_fields">
+            <form class="form_field">
+              <div class="day_input">
+                <span class="input_desc input_desc_day">Day</span>
+                <input
+                  type="text"
+                  name=""
+                  id="input_day"
+                  placeholder="DD"
+                  class="dobDay input_field input_day"
+                />
+                <span class="day_error"></span>
+                <span class="empty_field_error"></span>
+                <label for="input_day" class="hidden_label invalid"
+                  >This field is required</label
+                >
+              </div>
+              <div class="month_input">
+                <span class="input_desc input_desc_month">Month</span>
+
+                <input
+                  type="text"
+                  name=""
+                  id="input_month"
+                  placeholder="MM"
+                  class="dobMonth input_field input_month"
+                />
+                <span class="month_error"></span>
+                <label for="input_year" class="hidden_label invalid"
+                  >This field is required</label
+                >
+              </div>
+              <div class="year_input">
+                <span class="input_desc input_desc_year">Year</span>
+                <input
+                  type="text"
+                  name=""
+                  id="input_year"
+                  placeholder="YYYY"
+                  class="dobYear input_field input_year"
+                />
+                <span class="year_error"></span>
+                <span class="empty_field_error"></span>
+                <label for="input_year" class="hidden_label invalid"
+                  >This field is required</label
+                >
+              </div>
+            </form>
+          </div>
+
+          <div class="divider">
+            <div class="divider_line"></div>
+            <img
+              src="./assets/images/icon-arrow.svg"
+              alt="arrow"
+              class="svg_icon"
+            />
+          </div>
+          <div class="output_field">
+            <div class="div_years_span">
+              <span class="year_output_span">--</span>
+              <p class="span_year_p">years</p>
+            </div>
+            <div class="div_months_span">
+              <span class="month_output_span">--</span>
+              <p class="span_year_p">months</p>
+            </div>
+
+            <div class="div_days_span">
+              <span class="day_output_span">--</span>
+              <p class="span_year_p">days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      Coded by <a href="https://www.github.AikayKalu17">Aikay Kalu Amogu</a>
+    </div>
+  </body>
+</html>
