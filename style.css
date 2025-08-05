@@ -1384,8 +1384,7 @@ body {
   }
 
   body {
-    /* background-color: hsl(0, 1%, 44%); */
-    background-color: red;
+    background-color: hsl(0, 1%, 44%);
     max-width: 480px;
     height: 100vh;
     display: flex;
@@ -1397,8 +1396,8 @@ body {
   }
 
   .container {
-    height: 100%;
-    width: 97%;
+    height: 596px;
+    width: 335px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1407,7 +1406,7 @@ body {
 
   .main_container {
     height: 22rem;
-    width: 90%;
+    width: 88%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1418,7 +1417,7 @@ body {
   }
 
   .container_main {
-    width: 90%;
+    width: 95%;
     height: 90%;
     display: flex;
     flex-direction: column;
