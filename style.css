@@ -1385,8 +1385,8 @@ body {
 
   body {
     background-color: hsl(0, 1%, 44%);
+    max-width: 480px;
     height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
