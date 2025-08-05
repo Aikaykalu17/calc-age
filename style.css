@@ -1386,18 +1386,18 @@ body {
   body {
     background-color: hsl(0, 1%, 44%);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-family: 'Poppings', sans-serif;
     overflow: hidden;
   }
 
   .container {
-    height: 100%;
-    width: 100%;
+    height: 37rem;
+    width: 42rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1405,7 +1405,7 @@ body {
   }
 
   .main_container {
-    height: 23rem;
+    height: 24.5rem;
     width: 20rem;
     display: flex;
     flex-direction: column;
