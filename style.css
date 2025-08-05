@@ -1405,7 +1405,7 @@ body {
   }
 
   .main_container {
-    height: 22rem;
+    height: 24rem;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -1418,7 +1418,7 @@ body {
 
   .container_main {
     width: 90%;
-    height: 75%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -1651,7 +1651,7 @@ body {
   .countries {
     position: absolute;
     width: max-content;
-    top: 19%;
+    top: 20%;
     font-size: 9px;
     right: 12%;
     justify-content: right;
