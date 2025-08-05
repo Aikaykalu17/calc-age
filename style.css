@@ -273,19 +273,20 @@ body {
 
   body {
     background-color: hsl(0, 1%, 44%);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Poppings', sans-serif;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .container {
     height: 100%;
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,8 +294,8 @@ body {
   }
 
   .main_container {
-    height: 95%;
-    width: 95%;
+    height: 165rem;
+    width: 55rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -571,8 +572,8 @@ body {
   }
 
   .main_container {
-    height: 80%;
-    width: 95%;
+    height: 47rem;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -583,8 +584,8 @@ body {
   }
 
   .container_main {
-    width: 85%;
-    height: 75%;
+    width: 60rem;
+    height: 31rem;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -812,11 +813,11 @@ body {
   }
 
   .countries {
-    width: 85%;
+    width: 90%;
     font-size: 28px;
     justify-content: right;
     position: absolute;
-    top: 9%;
+    top: 15%;
   }
 }
 
@@ -1107,7 +1108,7 @@ body {
 
   body {
     background-color: hsl(0, 1%, 44%);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1373,6 +1374,291 @@ body {
     justify-content: right;
     position: absolute;
     top: 16%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(0, 1%, 44%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .container {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .main_container {
+    height: 25.5rem;
+    width: 21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 0.8rem 0.8rem 6.8rem 0.8rem;
+    position: relative;
+  }
+
+  .container_main {
+    width: 18rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+  }
+
+  .input_fields {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+  }
+
+  .input_field:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: hsl(259, 100%, 65%);
+  }
+
+  .day_input,
+  .month_input,
+  .year_input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .input_day {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+
+  .input_month {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_year {
+    height: 50px;
+    width: 75px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 4.9px;
+  }
+  .input_desc {
+    font-size: 10px;
+    font-family: 'Poppings', sans-serif;
+  }
+  .form_field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .output_field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  .attribution a {
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .span_year_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .span_day_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+
+  .span_month_p {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+  }
+  .day_output_span {
+    font-size: 30px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+  .month_output_span {
+    font-size: 30px;
+    color: hsl(259, 100%, 65%);
+    display: inline-block;
+    font-weight: 900;
+  }
+
+  .year_output_span {
+    font-size: 30px;
+    display: inline-block;
+    color: hsl(259, 100%, 65%);
+    font-weight: 900;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+  .svg_icon {
+    position: absolute;
+    left: 42%;
+    right: 50%;
+  }
+
+  .divider_line {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+    color: hsl(0, 0%, 86%);
+  }
+
+  .svg_icon {
+    background-color: hsl(259, 100%, 65%);
+    color: hslhsl(259, 100%, 65%);
+    border-radius: 100%;
+    fill: hsl(259, 100%, 65%);
+  }
+
+  .hidden_label {
+    font-size: 10px;
+    display: none;
+    color: red;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .invalid {
+    border-color: red;
+    /* color: red; */
+  }
+  .invalid:focus {
+    border: solid red;
+    border: 1px solid red;
+    outline: none;
+  }
+
+  .year_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .month_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 9px;
+  }
+
+  .date_day_error {
+    display: none;
+    color: red;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .country_data {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .countries {
+    position: absolute;
+    width: max-content;
+    top: 20%;
+    font-size: 9px;
+    right: 12%;
+    justify-content: right;
   }
 }
 
