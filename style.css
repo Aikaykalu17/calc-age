@@ -1385,28 +1385,30 @@ body {
 
   body {
     background-color: hsl(0, 1%, 44%);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    font-family: 'Poppings', sans-serif;
-    overflow: hidden;
-  }
-
-  .container {
-    height: 37rem;
-    width: 42rem;
+    max-width: 480px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppings', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .container {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
   }
 
   .main_container {
     height: 24.5rem;
-    width: 20rem;
+    width: 19rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1417,7 +1419,7 @@ body {
   }
 
   .container_main {
-    width: 17rem;
+    width: 16rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -1489,10 +1491,11 @@ body {
   }
 
   .attribution {
-    margin-bottom: 9px;
     font-size: 10px;
     text-align: center;
     color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
   .attribution a {
     font-size: 10px;
