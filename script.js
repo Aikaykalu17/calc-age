@@ -145,7 +145,8 @@ const padZero = function (num) {
 // Event listener for SVG icon
 svgIcon.addEventListener('click', updateAgeSpans);
 
-//  Event lisnter to calculate age only when
+//  Event lisnter to calculate age only
+//  when the user clicks the enter or svg icon
 inputFields.forEach(field => {
   field.addEventListener('keydown', e => {
     if (e.key === 'Enter') updateAgeSpans(e);
@@ -192,12 +193,12 @@ const whereAmI = async function () {
     if (!resGeo.ok) throw new Error('Problem fetching location');
 
     const dataGeo = await resGeo.json();
-    console.log(dataGeo);
 
     renderCountry(dataGeo);
+
     // Country data
   } catch (err) {
-    renderError(`❌ Couldn't fetch your location`);
+    renderError(`🚫 Unable to fetch location`);
     throw err;
   }
 };
